@@ -338,6 +338,30 @@ const ToolboxTab: React.FC = () => {
                 </tbody>
               </table>
             </div>
+
+            {/* 药品指引卡片 - 增强版 */}
+            <div className="p-6 bg-slate-900 rounded-[32px] text-white space-y-4 shadow-lg">
+               <div className="flex items-center gap-2 text-amber-400">
+                 <Info size={14}/>
+                 <span className="text-[10px] font-black uppercase tracking-widest">临床参考指南</span>
+               </div>
+               
+               <div className="grid gap-4">
+                 <div className="space-y-1.5">
+                   <div className="text-[9px] font-black text-amber-500 uppercase flex items-center gap-1.5">
+                     <span className="w-1 h-3 bg-amber-500 rounded-full"></span> 适应证
+                   </div>
+                   <p className="text-[11px] font-medium leading-relaxed text-slate-200">{selectedDrug.indications}</p>
+                 </div>
+                 
+                 <div className="space-y-1.5 pt-3 border-t border-white/5">
+                   <div className="text-[9px] font-black text-sky-400 uppercase flex items-center gap-1.5">
+                     <span className="w-1 h-3 bg-sky-400 rounded-full"></span> 推荐用法用量 (参考范围)
+                   </div>
+                   <p className="text-[11px] font-bold text-slate-100 leading-relaxed">{selectedDrug.range}</p>
+                 </div>
+               </div>
+            </div>
           </div>
         )}
 
